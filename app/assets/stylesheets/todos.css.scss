@@ -1,3 +1,61 @@
 // Place all the styles related to the Todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.sidebar {
+  background: black;
+  width: 200px;
+  float: left;
+  color: white;
+  margin: 0px 15px 0px 0px;
+  text-align: center;
+  height: 100%;
+  border-radius: 0px 0px 10px 10px;
+  .avatar {
+    width: 150px;
+    border-radius: 75px;
+    margin: 25px auto 0px auto;
+    border: 2px solid gray;
+  }
+  .stats {
+    background: rgba(255, 255, 255, 0.5);
+    ul {
+      padding: 15px 35px;
+      li {
+      list-style-type: none;
+      text-align: left;
+      }
+    }
+  }
+  ul {
+    margin-left: 0px;
+    padding-left: 0px;
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+.clear {
+  content: "";
+  height: 20px;
+}
+
+.list {
+  background: pink;
+}
+
+#columns {
+  -webkit-column-count: 2;
+  -webkit-column-gap: 15px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 2;
+  -moz-column-gap: 15px;
+  -moz-column-fill: auto;
+  column-count: 2;
+  column-gap: 15px;
+  column-fill: auto;
+  width: 730px;
+  margin: auto 15px;
+}

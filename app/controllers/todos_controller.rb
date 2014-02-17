@@ -1,10 +1,17 @@
 class TodosController < ApplicationController
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
+
 
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.all
+    @user = current_user
+    @todos = @user.todos
+    @orgs = @todos.where(category: "org")
+    @fits = @todos.where(category: "fit")
+    @works = @todos.where(category: "work")
+    @plays = @todos.where(category: "play")
   end
 
   # GET /todos/1
