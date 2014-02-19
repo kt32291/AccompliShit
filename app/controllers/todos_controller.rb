@@ -8,6 +8,7 @@ class TodosController < ApplicationController
   def index
     @user = current_user
     @todos = @user.todos
+    @todo = Todo.new
     @orgs = @todos.where(category: "org")
     @fits = @todos.where(category: "fit")
     @works = @todos.where(category: "work")

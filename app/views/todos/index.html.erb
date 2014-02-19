@@ -19,34 +19,37 @@
 
 <div id="columns">
   <div class="list org">
-    <h2>Organize</h2>
+    <h2><i class="fa fa-thumb-tack"></i> Organize</h2>
     <ul>
     <% @orgs.each do |org| %>
-      <li><%= org.content %></li>
+      <li><span><%= org.content %></span></li>
     <% end %>
     </ul>
   </div>
   <div class="list fit">
-    <h2>Fitness</h2>
+    <h2><i class="fa fa-heart"></i> Get Fit</h2>
     <ul>
     <% @fits.each do |fit| %>
-      <li><%= fit.content %></li>
+      <li><span><%= fit.content %></span></li>
     <% end %>
+      <%= form_for(@todo) do |t| %>
+      <li><%= t.text_field :content %></li>
+      <% end %>
     </ul>
   </div>
   <div class="list work">
-    <h2>Work</h2>
+    <h2><i class="fa fa-briefcase"></i> Work Hard</h2>
     <ul>
     <% @works.each do |work| %>
-      <li><%= work.content %></li>
+      <li><span><%= work.content %></span></li>
     <% end %>
     </ul>
   </div>
   <div class="list play">
-    <h2>Play</h2>
+    <h2><i class="fa fa-beer"></i> Play Hard</h2>
     <ul>
     <% @plays.each do |play| %>
-      <li><%= play.content %></li>
+      <li><span><%= play.content %></span></li>
     <% end %>
     </ul>
   </div>
