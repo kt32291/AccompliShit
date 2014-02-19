@@ -3,10 +3,41 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.header {
+  background: rgba(0,0,0,0.6);
+  border-bottom: 2px solid black;
+  margin-top: 0px;
+  color: white;
+  .title {
+    font-family: 'Lily Script One', cursive;
+    color: rgb(132, 255, 98);
+    font-size: 18pt;
+    h1 {
+      margin: 0px;
+      text-transform: none;
+    }
+  }
+  ul {
+    margin: 0px;
+    li {
+      display: inline-block;
+      font-size: 16pt;
+      padding: 0px 35px 0px 0px;
+      text-transform: uppercase;
+    }
+  }
+}
+
 body {
   margin: 0px;
   height: 100%;
   background: url('stardust.png');
+  font-family: 'Varela Round', sans-serif;
+}
+
+.clearhead {
+  content: "";
+  height: 0px;
 }
 
 .container {
@@ -34,6 +65,8 @@ body {
   }
   .stats {
     background: rgba(255, 255, 255, 0.5);
+    font-size: 18pt;
+    color: black;
     ul {
       padding: 15px 35px;
       li {
@@ -72,21 +105,19 @@ body {
   }
   ul {
     padding: 0px 10px;
-    li {
+    .content {
       font-size: 12pt;
       line-height: 35px;
       list-style-type: none;
       border-bottom: 2px solid black;
       position: relative;
+      cursor: hand;
       span {
         padding-left: 20px;
       }
-      input {
-        background-color: transparent;
-        border: none;
-      }
       &:hover {
         color: white;
+        cursor: pointer;
         &:before {
           content: "✓";
           float: left;
@@ -95,7 +126,41 @@ body {
         }
       }
     }
+    .field {
+      input {
+        background-color: transparent;
+        border: none;
+        font-size: 12pt;
+        list-style-type: none;
+        width: 100%;
+        outline-width: 0;
+      }
+      &:hover {
+        color: black;
+        &:before {
+          content: "";
+        }
+      }
+    }
   }
+}
+
+.del {
+  float: right;
+  color: rgba(255, 0, 0, 0.5);
+  text-decoration: none;
+  padding-right: 10px;
+  &:hover {
+    color: red;
+  }
+}
+
+i {
+  color: rgb(132, 255, 98);
+}
+
+.done {
+  text-decoration: line-through;
 }
 
 #columns {

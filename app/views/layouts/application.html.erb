@@ -6,14 +6,34 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Varela+Round' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <div class="header">
+    <ul>
+      <li>
+    <div class="title">
+      <h1>AccompliShit</h1>
+    </div>
+      </li>
+      <li>
+    <ul>
+      <li>About</li>
+      <li>Sign Up</li>
+      <% if user_signed_in? %>
+      <li><%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %></li>
+      <% else %>
+      <li>Sign In</li>
+      <% end %>
+    </ul>
+      </li>
+  </div>
+  <div class="clearhead"></div>
   <div class="container">
 <!--   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p> -->
-  <% if user_signed_in? %>
-    <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %>
-  <% end %>
+
+
 <%= yield %>
 </div>
 </body>

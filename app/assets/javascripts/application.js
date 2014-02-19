@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+
+  $('span').click(function () {
+    $(this).toggleClass('done');
+    });
+
+  });

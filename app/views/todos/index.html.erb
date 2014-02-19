@@ -1,6 +1,6 @@
 
 <div class="sidebar">
-  <%= image_tag 'katiethumbnail.jpg', class: "avatar" %>
+  <%= image_tag 'brunetteava.jpg', class: "avatar" %>
   <h1><%= @user.username %></h1>
   <div class="stats">
     <ul>
@@ -22,18 +22,21 @@
     <h2><i class="fa fa-thumb-tack"></i> Organize</h2>
     <ul>
     <% @orgs.each do |org| %>
-      <li><span><%= org.content %></span></li>
+      <li class="content"><span><%= org.content %> <%= link_to "✖︎", org, method: :delete, class: "del" %></span></li>
     <% end %>
+      <%= form_for(@todo) do |t| %>
+      <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
+      <% end %>
     </ul>
   </div>
   <div class="list fit">
     <h2><i class="fa fa-heart"></i> Get Fit</h2>
     <ul>
     <% @fits.each do |fit| %>
-      <li><span><%= fit.content %></span></li>
+      <li class="content"><span><%= fit.content %> <%= link_to "✖︎", fit, method: :delete, class: "del" %></span></li>
     <% end %>
       <%= form_for(@todo) do |t| %>
-      <li><%= t.text_field :content %></li>
+      <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
       <% end %>
     </ul>
   </div>
@@ -41,16 +44,22 @@
     <h2><i class="fa fa-briefcase"></i> Work Hard</h2>
     <ul>
     <% @works.each do |work| %>
-      <li><span><%= work.content %></span></li>
+      <li class="content"><span><%= work.content %> <%= link_to "✖︎", work, method: :delete, class: "del" %></span></li>
     <% end %>
+      <%= form_for(@todo) do |t| %>
+      <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
+      <% end %>
     </ul>
   </div>
   <div class="list play">
     <h2><i class="fa fa-beer"></i> Play Hard</h2>
     <ul>
     <% @plays.each do |play| %>
-      <li><span><%= play.content %></span></li>
+      <li class="content"><span><%= play.content %> <%= link_to "✖︎", play, method: :delete, class: "del" %></span></li>
     <% end %>
+      <%= form_for(@todo) do |t| %>
+      <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
+      <% end %>
     </ul>
   </div>
 </div>
