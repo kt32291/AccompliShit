@@ -11,7 +11,7 @@
   .title {
     font-family: 'Lily Script One', cursive;
     color: rgb(132, 255, 98);
-    font-size: 18pt;
+    font-size: 16pt;
     h1 {
       margin: 0px;
       text-transform: none;
@@ -26,6 +26,89 @@
       text-transform: uppercase;
     }
   }
+}
+
+.navlogo {
+  height: 50px;
+  padding-top: 5px;
+  margin-bottom: 0px;
+}
+
+
+.sign {
+  background: rgba(0,0,0,0.5);
+  width: 500px;
+  margin: 0px auto;
+  margin-top: 0px;
+  border-radius: 0px 0px 10px 10px;
+  border: 2px solid black;
+  text-align: center;
+  .signlogo {
+    margin-top: 0px;
+    background: rgba(0,0,0,0.4);
+    font-size: 24pt;
+    text-align: center;
+    text-transform: uppercase;
+    img {
+      width: 150px;
+      padding-top: 10px;
+    }
+    h1 {
+      font-family: 'Lily Script One', cursive;
+      color: rgb(132, 255, 98);
+      font-size: 16pt;
+      text-transform: none;
+      margin: 0px;
+      font-size: 32pt;
+      line-height: 18px;
+      padding-bottom: 30px;
+    }
+    h2 {
+      font-size: 12pt;
+      color: white;
+    }
+    h3 {
+      font-size: 11pt;
+      text-transform: none;
+      color: gray;
+      padding: 20px;
+      padding-top: 0px;
+      margin: 0px;
+    }
+  }
+  form {
+    color: gray;
+    width: 300px;
+    margin: 0px auto;
+    text-align: left;
+    input[type="text"], input[type="password"] {
+      background-color: transparent;
+      border: none;
+      font-size: 16pt;
+      color: white;
+      list-style-type: none;
+      width: 100%;
+      outline-width: 0;
+      border-bottom: 2px solid gray;
+      height: 45px;
+    }
+    label {
+      font-size: 11pt;
+      padding-bottom: 15px;
+    }
+    input[type="submit"] {
+      float: right;
+    }
+  }
+  .links {
+    width: 300px;
+    margin: 0px auto;
+    text-align: left;
+  }
+}
+
+.remember {
+  text-align: center;
 }
 
 body {
