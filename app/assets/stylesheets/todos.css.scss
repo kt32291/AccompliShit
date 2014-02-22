@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+$light-green: rgb(132, 255, 98);
+$purple: rgb(102, 0, 255);
+$yellow: rgb(255, 255, 51);
+
 .header {
   background: rgba(0,0,0,0.6);
   border-bottom: 2px solid black;
@@ -10,7 +14,7 @@
   color: white;
   .title {
     font-family: 'Lily Script One', cursive;
-    color: rgb(132, 255, 98);
+    color: $light-green;
     font-size: 16pt;
     h1 {
       margin: 0px;
@@ -43,6 +47,7 @@
   border-radius: 0px 0px 10px 10px;
   border: 2px solid black;
   text-align: center;
+  padding-bottom: 50px;
   .signlogo {
     margin-top: 0px;
     background: rgba(0,0,0,0.4);
@@ -55,7 +60,7 @@
     }
     h1 {
       font-family: 'Lily Script One', cursive;
-      color: rgb(132, 255, 98);
+      color: $light-green;
       font-size: 16pt;
       text-transform: none;
       margin: 0px;
@@ -70,27 +75,34 @@
     h3 {
       font-size: 11pt;
       text-transform: none;
-      color: gray;
+      color: $yellow;
       padding: 20px;
       padding-top: 0px;
       margin: 0px;
     }
+  }
+  h2 {
+    color: $purple;
+    text-transform: uppercase;
   }
   form {
     color: gray;
     width: 300px;
     margin: 0px auto;
     text-align: left;
-    input[type="text"], input[type="password"] {
+    input[type="text"], input[type="password"], input[type="email"], input[type="date"] {
       background-color: transparent;
       border: none;
-      font-size: 16pt;
+      font-size: 14pt;
       color: white;
       list-style-type: none;
       width: 100%;
       outline-width: 0;
       border-bottom: 2px solid gray;
-      height: 45px;
+      height: 40px;
+    }
+    input[type="checkbox"] {
+      background: black;
     }
     label {
       font-size: 11pt;
@@ -98,17 +110,39 @@
     }
     input[type="submit"] {
       float: right;
+      background-color: black;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius:10px;
+      border: 2px solid black;
+      display: inline-block;
+      color: white;
+      font-size: 16px;
+      font-weight:bold;
+      margin: 0px;
+      padding: 10px 30px;
+      text-decoration:none;
+      text-transform: uppercase;
+      text-shadow:0px 0px 0px #70706f;
+      font-family: 'Varela Round', sans-serif;
+      &:hover {
+        background: $purple;
+      }
     }
   }
   .links {
     width: 300px;
+    padding-top: 12px;
     margin: 0px auto;
     text-align: left;
+    font-size: 10pt;
+    color: white;
   }
 }
 
 .remember {
-  text-align: center;
+  text-align: right;
+  color: white;
 }
 
 body {
@@ -116,6 +150,19 @@ body {
   height: 100%;
   background: url('stardust.png');
   font-family: 'Varela Round', sans-serif;
+}
+
+a {
+  color: white;
+  &:hover {
+    color: gray;
+  }
+  &:visited {
+    color: white;
+      &:hover {
+    color: gray;
+      }
+  }
 }
 
 .clearhead {

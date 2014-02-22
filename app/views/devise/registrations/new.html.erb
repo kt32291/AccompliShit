@@ -1,24 +1,47 @@
+<div class="sign">
+<div class="signlogo">
+<%= image_tag 'aslogo.png'  %>
+<h1>AccompliShit</h1>
+<h2>Complete Tasks - Level Up - Rock On</h2>
+
+<h3>What the hell is AccompliShit?</h3>
+</div>
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <div>
+  <%= f.email_field :email, :autofocus => true %><br />
+  <%= f.label :email %>
+</div>
 
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
+  <div>
+  <%= f.text_field :username %><br />
+  <%= f.label :username %>
+</div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <div>
+  <%= f.password_field :password %><br />
+  <%= f.label :password %>
+</div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <div>
+  <%= f.password_field :password_confirmation %><br />
+  <%= f.label :password_confirmation %>
+</div>
 
-  <div><%= f.label :birthday %><br />
-  <%= f.date_field :birthday %></div>
+  <div>
+  <%= f.date_field :birthday %><br />
+  <%= f.label :birthday %>
+</div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
+<div class="links">
 <%= render "devise/shared/links" %>
+</div>
+
+</div>
