@@ -38,8 +38,9 @@
     <% @fits.each do |fit| %>
       <li class="content"><span><%= fit.content %> <%= link_to "✖︎", fit, method: :delete, class: "del" %></span></li>
     <% end %>
-      <%= form_for(@todo) do |t| %>
-      <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
+      <%= form_for(@todo, html: {class: "fitness"}) do |t| %>
+        <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
+        <%= t.hidden_field :category, :value => "fit" %>
       <% end %>
     </ul>
   </div>

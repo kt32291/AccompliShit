@@ -15,11 +15,23 @@
 //= require turbolinks
 //= require_tree .
 
-
 $(function() {
 
   $('span').click(function () {
     $(this).toggleClass('done');
     });
 
+  $('form.fitness').submit(function(e) {
+
+    e.preventDefault();
+
+    $.post($(this).attr('action') + '.json', $(this).serialize() )
+    .done(function(data) {
+      console.log(data);
+      $('form.fitness').before("<li class='content'><span>" +data.content+ "<a href='' data-method='delete' class='del' >✖︎</a></span></li>");
+      $('form.fitness').find('input:visible').val('');
+    });
+
   });
+
+});
