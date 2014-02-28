@@ -15,6 +15,12 @@ class TodosController < ApplicationController
     @plays = @todos.where(category: "play")
   end
 
+  def one
+    @user = current_user
+    @todos = @user.todos
+    @todo = Todo.new
+  end
+
   # GET /todos/1
   # GET /todos/1.json
   def show

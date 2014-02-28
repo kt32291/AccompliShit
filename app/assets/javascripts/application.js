@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.jSlots
+//= require jquery.easing.1.3
 //= require_tree .
+
 
 $(function() {
 
@@ -33,5 +36,17 @@ $(function() {
     });
 
   });
+
+$('.tlt').click(function () {
+    $('.tlt').textillate();
+});
+
+
+    $('.slot').jSlots({
+        spinner : '#playBtn',
+        number: 1,
+        winnerNumber : 7,
+        easing : 'easeOutSine'
+    });
 
 });

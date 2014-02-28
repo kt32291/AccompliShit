@@ -1,0 +1,18 @@
+<%= render 'header' %>
+
+<div class="container">
+<div class="empty"></div>
+<div class="jSlots-wrapper">
+<ul class="slot">
+  <% @todos.each do |todo| %>
+    <li><%= todo.content %></li>
+  <% end %>
+</ul>
+
+</div>
+<br/>
+<!-- this button will start the spin -->
+<div class="meep">
+<input type="button" id="playBtn" value="play">
+</div>
+</div>
