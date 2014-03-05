@@ -11,10 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.jSlots
 //= require jquery.easing.1.3
+//= require flowtype
 //= require_tree .
 
 
@@ -37,10 +39,6 @@ $(function() {
 
   });
 
-$('.tlt').click(function () {
-    $('.tlt').textillate();
-});
-
 
     $('.slot').jSlots({
         spinner : '#playBtn',
@@ -48,5 +46,11 @@ $('.tlt').click(function () {
         winnerNumber : 7,
         easing : 'easeOutSine'
     });
+
+    $('.slot li a').hover(function (){
+      $('.doit').toggleClass('showit');
+    })
+
+
 
 });

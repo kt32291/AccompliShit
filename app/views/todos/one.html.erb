@@ -1,11 +1,26 @@
-<%= render 'header' %>
+ <%= render 'header' %>
 
 <div class="container">
-<div class="empty"></div>
+<div class="empty">
+    <div class="doit">
+<h2>Click to AccompliShit!</h2>
+<i class="fa fa-hand-o-down"></i>
+</div>
+</div>
 <div class="jSlots-wrapper">
 <ul class="slot">
   <% @todos.each do |todo| %>
-    <li><%= todo.content %></li>
+    <% if todo.content.length < 10 %>
+    <li class="biggest"><%= link_to todo.content, todo, method: :delete %></li>
+    <% elsif todo.content.length < 15 %>
+    <li class="bigger"><%= link_to todo.content, todo, method: :delete %></li>
+    <% elsif todo.content.length < 20 %>
+    <li class="big"><%= link_to todo.content, todo, method: :delete %></li>
+    <% elsif todo.content.length < 25 %>
+    <li class="medium"><%= link_to todo.content, todo, method: :delete %></li>
+    <% else %>
+    <li class="small"><%= link_to todo.content, todo, method: :delete %></li>
+    <% end %>
   <% end %>
 </ul>
 
@@ -13,6 +28,8 @@
 <br/>
 <!-- this button will start the spin -->
 <div class="meep">
-<input type="button" id="playBtn" value="play">
+<input type="button" id="playBtn" value="Accomplish other Shit">
 </div>
+
+
 </div>

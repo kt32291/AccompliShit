@@ -41,8 +41,8 @@
             onEnd : $.noop,      // Function: run on spin end. It is passed (finalNumbers:Array). finalNumbers gives the index of the li each slot stopped on in order.
             onWin : $.noop,      // Function: run on winning number. It is passed (winCount:Number, winners:Array)
             easing : 'swing',    // String: easing type for final spin
-            time : 5000,         // Number: total time of spin animation
-            loops : 6            // Number: times it will spin during the animation
+            time : 1500,         // Number: total time of spin animation
+            loops : 3            // Number: times it will spin during the animation
         };
 
         // --------------------------------------------------------------------- //
