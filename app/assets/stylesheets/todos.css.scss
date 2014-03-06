@@ -1,4 +1,4 @@
-  // Place all the styles related to the Todos controller here.
+   // Place all the styles related to the Todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -7,13 +7,14 @@ $light-green: rgb(132, 255, 98);
 $purple: rgb(102, 0, 255);
 $yellow: rgb(255, 255, 51);
 
-
+// HEADER
 
 .header {
   background: rgba(0,0,0,0.6);
   border-bottom: 2px solid black;
   margin-top: 0px;
   color: white;
+  position: relative;
   .title {
     font-family: 'Lily Script One', cursive;
     color: $light-green;
@@ -27,6 +28,16 @@ $yellow: rgb(255, 255, 51);
     margin: 0px;
     li {
       display: inline-block;
+      text-decoration: none;
+    }
+  }
+  .linkz {
+    margin: 0px;
+    position: absolute;
+    top: 0;
+    padding-top: 25px;
+    li {
+      display: inline-block;
       font-size: 16pt;
       padding: 0px 35px 0px 0px;
       text-transform: uppercase;
@@ -34,12 +45,49 @@ $yellow: rgb(255, 255, 51);
   }
 }
 
+
 .navlogo {
   height: 50px;
   padding-top: 5px;
   margin-bottom: 0px;
 }
 
+
+.current_user_stats {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  .navava {
+      height: 50px;
+      border-radius: 25px;
+      border: 1px solid white;
+  }
+  ul {
+    padding-top: 15px;
+    padding-left: 15px;
+    li {
+      font-size: 14pt;
+      text-transform: none;
+      padding-right: 15px;
+      &.un {
+        color: $light-green;
+      }
+      i {
+        color: $purple;
+      }
+    }
+  }
+}
+
+.current_user_stats ul, .navava {
+  float: right;
+}
+
+
+
+// SIGN IN ____________________________________________________
 
 .sign {
   background: rgba(0,0,0,0.5);
@@ -147,6 +195,9 @@ $yellow: rgb(255, 255, 51);
   color: white;
 }
 
+
+// ALL BODY
+
 body {
   margin: 0px;
   height: 100%;
@@ -177,6 +228,8 @@ a {
   margin: 0 auto;
   height: 100%;
 }
+
+// LANDING PAGE
 
 .empty {
   content: "";
@@ -257,6 +310,8 @@ a {
     text-transform: uppercase;
   }
 }
+
+// OLD DASHBOARD
 
 .sidebar {
   background: rgba(0,0,0,0.4);

@@ -6,15 +6,35 @@
     </div>
       </li>
       <li>
-    <ul>
+    <ul class="linkz">
       <li>About</li>
-      <li>Sign Up</li>
       <% if user_signed_in? %>
       <li><%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %></li>
+      </ul>
+    </li>
+  </ul>
+    <div class="current_user_stats">
+
+        <ul>
+          <li class="un"><%= @user.username %></li>
+          <li>1751 Pts</li>
+          <li>Level 5</li>
+          <li><i class="fa fa-star-o"></i> 16</li>
+        </ul>
+        <%= image_tag 'brunetteava.jpg', class: "navava", height: 50 %>
+      </div>
       <% else %>
-      <li>Sign In</li>
-      <% end %>
-    </ul>
+      <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+      </ul>
       </li>
+      </ul>
+      <% end %>
+
+
+
+
   </div>
+
+
   <div class="clearhead"></div>
