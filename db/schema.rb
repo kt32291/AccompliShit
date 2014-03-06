@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217225309) do
+ActiveRecord::Schema.define(version: 20140306213824) do
+
+  create_table "badges", force: true do |t|
+    t.string   "name"
+    t.integer  "points"
+    t.boolean  "default"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "levels", force: true do |t|
+    t.integer  "badge_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "todos", force: true do |t|
     t.text     "content"
@@ -36,6 +51,7 @@ ActiveRecord::Schema.define(version: 20140217225309) do
     t.datetime "updated_at"
     t.string   "username"
     t.date     "birthday"
+    t.integer  "points"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

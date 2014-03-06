@@ -13,6 +13,10 @@ gem 'sass-rails', '~> 4.0.0'
 
 gem 'devise'
 
+#gioco
+
+gem 'gioco'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

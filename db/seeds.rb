@@ -65,6 +65,7 @@ todos = [
 ]
 
 Todo.destroy_all
+Badge.destroy_all
 
 todos.each do |todo|
   t = Todo.new
@@ -73,3 +74,4 @@ todos.each do |todo|
   t.user_id = todo[:user_id]
   t.save
 end
+require "#{Rails.root}/db/gioco/db.rb"

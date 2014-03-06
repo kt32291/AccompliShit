@@ -49,6 +49,7 @@ $(function() {
 
     $('.slot li a').hover(function (){
       $('.doit').toggleClass('showit');
+      $(this).toggleClass('bam');
     })
 
 

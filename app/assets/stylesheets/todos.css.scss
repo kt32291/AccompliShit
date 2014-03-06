@@ -10,7 +10,7 @@ $yellow: rgb(255, 255, 51);
 // HEADER
 
 .header {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.3);
   border-bottom: 2px solid black;
   margin-top: 0px;
   color: white;
@@ -90,17 +90,17 @@ $yellow: rgb(255, 255, 51);
 // SIGN IN ____________________________________________________
 
 .sign {
-  background: rgba(0,0,0,0.5);
+  // background: rgba(0,0,0,0.5);
   width: 500px;
   margin: 0px auto;
   margin-top: 0px;
-  border-radius: 0px 0px 10px 10px;
-  border: 2px solid black;
+  // border-radius: 0px 0px 10px 10px;
+  // border: 2px solid black;
   text-align: center;
   padding-bottom: 50px;
   .signlogo {
     margin-top: 0px;
-    background: rgba(0,0,0,0.4);
+    // background: rgba(0,0,0,0.4);
     font-size: 24pt;
     text-align: center;
     text-transform: uppercase;
@@ -125,18 +125,21 @@ $yellow: rgb(255, 255, 51);
     h3 {
       font-size: 11pt;
       text-transform: none;
-      color: $yellow;
+      // color: $yellow;
+      color: $light-green;
       padding: 20px;
-      padding-top: 0px;
+      padding-top: 8px;
       margin: 0px;
     }
   }
   h2 {
-    color: $purple;
+    // color: $purple;
+    color: black;
     text-transform: uppercase;
+    margin-bottom: 0px;
   }
   form {
-    color: gray;
+    color: black;
     width: 300px;
     margin: 0px auto;
     text-align: left;
@@ -148,7 +151,7 @@ $yellow: rgb(255, 255, 51);
       list-style-type: none;
       width: 100%;
       outline-width: 0;
-      border-bottom: 2px solid gray;
+      border-bottom: 2px solid black;
       height: 40px;
     }
     input[type="checkbox"] {
@@ -160,11 +163,11 @@ $yellow: rgb(255, 255, 51);
     }
     input[type="submit"] {
       float: right;
-      background-color: black;
+      background-color: gray;
       -moz-border-radius: 10px;
       -webkit-border-radius: 10px;
       border-radius:10px;
-      border: 2px solid black;
+      border: 2px solid white;
       display: inline-block;
       color: white;
       font-size: 16px;
@@ -192,7 +195,7 @@ $yellow: rgb(255, 255, 51);
 
 .remember {
   text-align: right;
-  color: white;
+  color: black;
 }
 
 
@@ -249,6 +252,10 @@ a {
       display: block;
     }
   }
+}
+
+.bam {
+  text-decoration: line-through;
 }
 
 
@@ -308,6 +315,9 @@ a {
     padding: 10px 30px;
     text-decoration:none;
     text-transform: uppercase;
+    &:hover {
+      background: $purple;
+    }
   }
 }
 

@@ -69,7 +69,9 @@ class TodosController < ApplicationController
   # DELETE /todos/1
   # DELETE /todos/1.json
   def destroy
+    @user = current_user
     @todo.destroy
+    @user.change_points(6)
     respond_to do |format|
       format.html { redirect_to '/test' }
       format.json { head :no_content }
