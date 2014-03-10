@@ -19,14 +19,14 @@
 </div>
 
 <div class="pgcontent">
-  <%= image_tag '1.png' %>
+  <%= image_tag @current_badge.img %>
 
   <h1><%= @current_badge.name.capitalize %></h1>
   <p><%= @current_badge.description %></p>
 
-  <div class="proglabel"><span class="l">Noob</span><span class="r">Grasshopper</span></div>
+  <div class="proglabel"><span class="l"><%= @current_badge.name.capitalize %></span><span class="r"><%= @next_badge[:badge][:name].capitalize %></span></div>
   <div class="progresswrap">
-    <div class="progress" style="width: <%= @next_badge[:percentage] %>px">
+    <div class="progress" style="width: <%= @next_badge[:percentage] %>%">
     </div>
   </div>
 
