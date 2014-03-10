@@ -52,6 +52,8 @@ $(function() {
       $(this).toggleClass('bam');
     })
 
-
+    $('a').click(function () {
+      alert("Six for you Glen Coco! You go Glen Coco. Take 6 points for your hard work");
+      });
 
 });

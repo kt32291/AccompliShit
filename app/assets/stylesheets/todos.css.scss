@@ -1,4 +1,4 @@
-   // Place all the styles related to the Todos controller here.
+    // Place all the styles related to the Todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -234,6 +234,24 @@ a {
 
 // LANDING PAGE
 
+@mixin fontsizefix() {
+      &.biggest {
+        font-size: 80pt;
+      }
+      &.bigger {
+        font-size: 75pt;
+      }
+      &.big {
+        font-size: 65pt;
+      }
+      &.medium {
+        font-size: 50pt;
+      }
+      &.small {
+        font-size: 40pt;
+      }
+}
+
 .empty {
   content: "";
   height: 225px;
@@ -280,21 +298,7 @@ a {
       white-space: nowrap;
       position: relative;
       bottom: 0;
-      &.biggest {
-        font-size: 80pt;
-      }
-      &.bigger {
-        font-size: 75pt;
-      }
-      &.big {
-        font-size: 65pt;
-      }
-      &.medium {
-        font-size: 50pt;
-      }
-      &.small {
-        font-size: 40pt;
-      }
+      @include fontsizefix;
     }
   }
 }
@@ -318,6 +322,40 @@ a {
     &:hover {
       background: $purple;
     }
+  }
+}
+
+.add {
+  background: black;
+  color: white;
+  margin: 15px auto;
+  text-align: center;
+  width: 250px;
+  border-radius: 10px;
+  padding: 5px;
+  i {
+    color: white;
+  }
+}
+
+.listview {
+  text-align: center;
+  li {
+    @include fontsizefix;
+    list-style-type: none;
+    &:hover {
+      text-decoration: line-through;
+    }
+  }
+}
+
+// PROFILE
+.progresswrap {
+  width: 500px;
+  height: 30px;
+  border: 1px solid black;
+  .progress {
+    background: black;
   }
 }
 

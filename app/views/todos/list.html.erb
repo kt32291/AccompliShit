@@ -1,0 +1,19 @@
+<%= render 'header' %>
+
+<h2 class="add"><i class="fa fa-plus-square"></i> Add More Shit</h2>
+
+<ul class="listview">
+  <% @todos.each do |todo| %>
+    <% if todo.content.length < 10 %>
+    <li class="biggest"><%= link_to todo.content, todo, method: :delete %></li>
+    <% elsif todo.content.length < 15 %>
+    <li class="bigger"><%= link_to todo.content, todo, method: :delete %></li>
+    <% elsif todo.content.length < 20 %>
+    <li class="big"><%= link_to todo.content, todo, method: :delete %></li>
+    <% elsif todo.content.length < 25 %>
+    <li class="medium"><%= link_to todo.content, todo, method: :delete %></li>
+    <% else %>
+    <li class="small"><%= link_to todo.content, todo, method: :delete %></li>
+  <% end %>
+  <% end %>
+</ul>

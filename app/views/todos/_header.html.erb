@@ -16,7 +16,7 @@
     <div class="current_user_stats">
 
         <ul>
-          <li class="un"><%= @user.username %></li>
+          <li class="un"><%= link_to @user.username, dashboard_url(user_id: @user.id) %></li>
           <li>
             <% if @user.badges.count > 0 %>
               <%= @user.badges.last.name.capitalize %>

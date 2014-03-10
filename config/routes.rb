@@ -5,6 +5,8 @@ ListApp::Application.routes.draw do
   root 'todos#one'
 
   get 'test' => 'todos#one'
+  get 'list' => 'todos#list'
+  get 'dashboard' => 'todos#dashboard'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

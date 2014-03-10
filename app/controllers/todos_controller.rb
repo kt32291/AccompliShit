@@ -15,9 +15,21 @@ class TodosController < ApplicationController
     @plays = @todos.where(category: "play")
   end
 
-  def one
+  def dashboard
     @user = current_user
     @todos = @user.todos
+    @todo = Todo.new
+  end
+
+  def one
+    @user = current_user
+    @todos = @user.todos.shuffle
+    @todo = Todo.new
+  end
+
+  def list
+    @user = current_user
+    @todos = @user.todos.order(:content)
     @todo = Todo.new
   end
 
