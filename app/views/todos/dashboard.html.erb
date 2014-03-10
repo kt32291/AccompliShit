@@ -4,7 +4,7 @@
 <% @current_badge = @viewing_user.badges.last %>
 <% @next_badge = @viewing_user.next_badge? %>
 
-<div class="container">
+<div class="containersmall">
 
 <div class="sidebar">
   <%= image_tag 'brunetteava.jpg', class: "avatar" %>
@@ -24,8 +24,9 @@
   <h1><%= @current_badge.name.capitalize %></h1>
   <p><%= @current_badge.description %></p>
 
+  <div class="proglabel"><span class="l">Noob</span><span class="r">Grasshopper</span></div>
   <div class="progresswrap">
-    <div class="progress" style="width:<%= @next_badge[:percentage] %>">
+    <div class="progress" style="width: <%= @next_badge[:percentage] %>px">
     </div>
   </div>
 

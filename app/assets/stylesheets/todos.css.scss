@@ -232,6 +232,13 @@ a {
   height: 100%;
 }
 
+.containersmall {
+  max-width: 750px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+
 // LANDING PAGE
 
 @mixin fontsizefix() {
@@ -350,13 +357,36 @@ a {
 }
 
 // PROFILE
+
+
+.pgcontent {
+  width: 535px;
+  margin: 0;
+  padding: 15px 0;
+  float: right;
+  text-align: center;
+  color: black;
+.proglabel {
+  width: 470px;
+  text-align: right;
+  margin: 0 auto;
+  padding: 0 15px;
+  .l {
+    float: left;
+  }
+}
 .progresswrap {
+  margin: 0 auto;
   width: 500px;
   height: 30px;
   border: 1px solid black;
+  border-radius: 15px;
   .progress {
-    background: black;
+    background: $light-green;
+    height: 30px;
+    border-radius: 15px 0px 0px 15px;
   }
+}
 }
 
 // OLD DASHBOARD
