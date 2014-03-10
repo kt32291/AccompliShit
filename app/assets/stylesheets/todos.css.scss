@@ -366,6 +366,15 @@ a {
   float: right;
   text-align: center;
   color: black;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 10px 10px;
+  h1 {
+    font-family: 'Geostar Fill', cursive;
+    color: $light-green;
+  }
+  p {
+    color: white;
+  }
 .proglabel {
   width: 470px;
   text-align: right;
