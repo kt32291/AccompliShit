@@ -2,11 +2,12 @@ ListApp::Application.routes.draw do
   devise_for :users
   resources :todos
 
-  root 'todos#one'
+  root 'pages#about'
 
-  get 'test' => 'todos#one'
+  get 'roulette' => 'todos#one'
   get 'list' => 'todos#list'
   get 'dashboard' => 'todos#dashboard'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
