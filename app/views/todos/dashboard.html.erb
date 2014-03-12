@@ -6,7 +6,7 @@
 
 <div class="containersmall">
 
-<div class="sidebar">
+<div class="sidebar slide">
   <%= image_tag 'brunetteava.jpg', class: "avatar" %>
   <h1><%= @viewing_user.username %></h1>
   <div class="stats">
@@ -18,7 +18,7 @@
   </div>
 </div>
 
-<div class="pgcontent">
+<div class="pgcontent slide">
   <%= image_tag @current_badge.img %>
 
   <h1><%= @current_badge.name.capitalize %></h1>

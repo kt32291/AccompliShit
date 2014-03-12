@@ -22,9 +22,9 @@
 
 $(function() {
 
-  $('span').click(function () {
-    $(this).toggleClass('done');
-    });
+  // $('span').click(function () {
+  //   $(this).toggleClass('done');
+  //   });
 
   $('form.fitness').submit(function(e) {
 
@@ -38,7 +38,7 @@ $(function() {
     });
 
   });
-
+    $('.slide').slideDown(700, 'linear');
 
     $('.slot').jSlots({
         spinner : '#playBtn',
@@ -52,7 +52,7 @@ $(function() {
       $(this).toggleClass('bam');
     })
 
-    $('a').click(function () {
+    $('a.poop').click(function () {
       alert("Six for you Glen Coco! You go Glen Coco. Take 6 points for your hard work");
       });
 

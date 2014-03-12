@@ -10,18 +10,26 @@ $yellow: rgb(255, 255, 51);
 // HEADER
 
 .header {
-  background: rgba(0,0,0,0.3);
-  border-bottom: 2px solid black;
+  // background: rgba(0,0,0,0.3);
+  background-color: black;
+  border-bottom: 1px solid $purple;
   margin-top: 0px;
   color: white;
   position: relative;
+  height: 70px;
   .title {
+    background: rgba(255,255,255,0.2);
     font-family: 'Lily Script One', cursive;
     color: $light-green;
-    font-size: 16pt;
+    font-size: 18pt;
+    padding: 0px 25px;
+    // border-left: 1px solid $purple;
+    // border-right: 1px solid $purple;
+    height: 70px;
     h1 {
       margin: 0px;
       text-transform: none;
+      // text-decoration: underline;
     }
   }
   ul {
@@ -360,6 +368,7 @@ a {
 
 
 .pgcontent {
+  display: none;
   width: 535px;
   margin: 0;
   padding: 15px 0;
@@ -403,6 +412,7 @@ a {
 // OLD DASHBOARD
 
 .sidebar {
+  display: none;
   background: rgba(0,0,0,0.4);
   width: 200px;
   float: left;
