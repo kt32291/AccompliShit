@@ -1,7 +1,8 @@
 badge = Badge.create({
                       :name => 'grasshopper',
                       :points => '300',
-                      :description => 'foo',
+                      :img => '3.png',
+                      :description => 'Wax on, wax off.',
                       :default => 'false'
                     })
 puts '> Badge successfully created'

@@ -1,3 +1,5 @@
 require "#{Rails.root}/db/gioco/create_badge_noob.rb"
 require "#{Rails.root}/db/gioco/create_badge_amateur.rb"
 require "#{Rails.root}/db/gioco/create_badge_grasshopper.rb"
+require "#{Rails.root}/db/gioco/create_badge_padawan.rb"
+require "#{Rails.root}/db/gioco/create_badge_young_wizard.rb"

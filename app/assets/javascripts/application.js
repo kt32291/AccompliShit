@@ -38,7 +38,7 @@ $(function() {
     });
 
   });
-    $('.slide').slideDown(700, 'linear');
+    // $('.slide').slideDown(700, 'linear');
 
     $('.slot').jSlots({
         spinner : '#playBtn',
