@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-has_many :badges , :through => :levels 
-has_many :levels  
+has_many :badges , :through => :levels
+has_many :levels
+
 
 def change_points(options)
   if Gioco::Core::KINDS
@@ -47,4 +48,5 @@ end
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :todos
+  mount_uploader :avatar, AvatarUploader
 end

@@ -19,7 +19,7 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
 }
 
 .billboard {
-  margin: 0px 30px;
+  margin: 0px auto;
   background: rgba(0,0,0,0.1);
   border-radius: 0 0 10px 10px;
   img {

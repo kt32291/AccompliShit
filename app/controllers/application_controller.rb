@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :config_permitted_parameters, if: :devise_controller?
 
   def config_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [:username, :email, :birthday]
+    devise_parameter_sanitizer.for(:sign_up) << [:username, :email, :birthday, :avatar]
     devise_parameter_sanitizer.for(:sign_in) << :username
   end
 end
