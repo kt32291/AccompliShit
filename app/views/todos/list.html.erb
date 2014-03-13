@@ -2,7 +2,7 @@
 
 <h2 class="add"><i class="fa fa-plus-square"></i> Add More Shit</h2>
 
-<% if @todos %>
+<% if @user.todos.count != 0 %>
 
 <ul class="listview">
   <% @todos.each do |todo| %>
@@ -21,7 +21,7 @@
 
   <% else %>
 
-  <li>Nothing to do? I don't believe you...</li>
+  <li class="medium"><%= link_to "Nothing to do? I don't believe you..." %></li>
 
   <% end %>
 
