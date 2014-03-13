@@ -2,6 +2,8 @@
 
 <h2 class="add"><i class="fa fa-plus-square"></i> Add More Shit</h2>
 
+<% if @todos %>
+
 <ul class="listview">
   <% @todos.each do |todo| %>
     <% if todo.content.length < 10 %>
@@ -16,4 +18,11 @@
     <li class="small"><%= link_to todo.content, todo, method: :delete, :class => "poop" %></li>
   <% end %>
   <% end %>
+
+  <% else %>
+
+  <li>Nothing to do? I don't believe you...</li>
+
+  <% end %>
+
 </ul>
