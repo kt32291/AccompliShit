@@ -7,6 +7,7 @@ ListApp::Application.routes.draw do
   get 'roulette' => 'todos#one'
   get 'list' => 'todos#list'
   get 'dashboard' => 'todos#dashboard'
+  get 'leaderboard' => 'todos#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

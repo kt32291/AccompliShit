@@ -7,6 +7,7 @@ class TodosController < ApplicationController
   # GET /todos.json
   def index
     @user = current_user
+    @all_users = User.all.order(:points).reverse
     @todos = @user.todos
     @todo = Todo.new
     @orgs = @todos.where(category: "org")

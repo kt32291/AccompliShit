@@ -1,72 +1,23 @@
 <%= render 'header' %>
 
 <div class="container">
-
-<div class="sidebar">
-  <%= image_tag 'brunetteava.jpg', class: "avatar" %>
-  <h1><%= @user.username %></h1>
-  <div class="stats">
+<ul class="leaderboard">
+  <% @all_users.each do |user| %>
+  <li>
     <ul>
-      <li>1,256 pts</li>
-      <li>Lvl 10</li>
-    </ul>
-  </div>
-  <ul>
-    <li>Profile</li>
-    <li>Badges</li>
-    <li>Leaderboard</li>
-  </ul>
-</div>
-
-<div class="clear"></div>
-
-<div id="columns">
-  <div class="list org">
-    <h2><i class="fa fa-thumb-tack"></i> Organize</h2>
-    <ul>
-    <% @orgs.each do |org| %>
-      <li class="content"><span><%= org.content %> <%= link_to "✖︎", org, method: :delete, class: "del" %></span></li>
-    <% end %>
-      <%= form_for(@todo) do |t| %>
-      <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
+      <li><span><%= user.ranking %></span></li>
+      <li><%= link_to image_tag(user.avatar.url), dashboard_path(user_id: user.id) %></li>
+      <li><span><%= user.points %> Pts.</span></li>
+      <li><span><%= link_to user.username, dashboard_path(user_id: user.id) %></span></li>
+      <% if user.badges.count > 0 %>
+      <li><span><%= user.badges.last.name.capitalize %></span></li>
+      <% else %>
+      <li><span>No Badges</span></li>
       <% end %>
     </ul>
-  </div>
-  <div class="list fit">
-    <h2><i class="fa fa-heart"></i> Get Fit</h2>
-    <ul>
-    <% @fits.each do |fit| %>
-      <li class="content"><span><%= fit.content %> <%= link_to "✖︎", fit, method: :delete, class: "del" %></span></li>
-    <% end %>
-      <%= form_for(@todo, html: {class: "fitness"}) do |t| %>
-        <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
-        <%= t.hidden_field :category, :value => "fit" %>
-      <% end %>
-    </ul>
-  </div>
-  <div class="list work">
-    <h2><i class="fa fa-briefcase"></i> Work Hard</h2>
-    <ul>
-    <% @works.each do |work| %>
-      <li class="content"><span><%= work.content %> <%= link_to "✖︎", work, method: :delete, class: "del" %></span></li>
-    <% end %>
-      <%= form_for(@todo) do |t| %>
-      <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="list play">
-    <h2><i class="fa fa-beer"></i> Play Hard</h2>
-    <ul>
-    <% @plays.each do |play| %>
-      <li class="content"><span><%= play.content %> <%= link_to "✖︎", play, method: :delete, class: "del" %></span></li>
-    <% end %>
-      <%= form_for(@todo) do |t| %>
-      <li class="content field"><span><%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %></span></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
+  </li>
+  <% end %>
+</ul>
 
 
 </div>

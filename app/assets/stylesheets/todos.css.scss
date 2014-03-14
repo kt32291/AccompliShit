@@ -588,5 +588,28 @@ i {
   margin: auto 15px;
 }
 
+// LEADERBOARD ___________________________________
 
+.leaderboard {
+  li {
+    list-style-type: none;
+    color: white;
+    ul {
+      li {
+        display: inline-block;
+        list-style-type: none;
+        line-height: 35px;
+        padding: 0px 30px;
+        img {
+          height: 30px;
+          border-radius: 15px;
+        }
+        span {
+          font-size: 24pt;
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}
 
