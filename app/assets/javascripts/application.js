@@ -53,7 +53,7 @@ $(function() {
     });
 
     $('.un').hover(function (){
-      $('.subnav').slideDown("slow");
+      $('.subnav').stop(true, true).slideDown("slow");
     }, function() {
       $('.subnav').slideUp("slow");
     }

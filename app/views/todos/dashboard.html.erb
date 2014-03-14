@@ -1,6 +1,6 @@
 <%= render 'header' %>
 
-<% @viewing_user = User.find_by(params[:user_id]) %>
+<% @viewing_user = User.find_by(id: params[:user_id]) %>
 <% @current_badge = @viewing_user.badges.last %>
 <% @next_badge = @viewing_user.next_badge? %>
 
@@ -11,20 +11,40 @@
   <h1><%= @viewing_user.username %></h1>
   <div class="stats">
     <ul>
+      <% if @viewing_user.points != nil %>
       <li><%= @viewing_user.points %> Pts</li>
+      <% else %>
+      <li>0 Pts</li>
+      <% end %>
+      <% if @viewing_user.badges.count != 0 %>
       <li><%= @current_badge.name.capitalize %></li>
-      <li><i class="fa fa-star-o"></i> 16</li>
+      <% else %>
+      <li>No Badge</li>
+      <% end %>
+      <li><i class="fa fa-star-o"></i> <%= @viewing_user.ranking %></li>
     </ul>
   </div>
+  <% if @viewing_user.id == current_user.id %>
+  <%= link_to "My List", list_url %>
+  <% end %>
 </div>
 
 <div class="pgcontent slide">
+  <% if @viewing_user.badges.count != 0 %>
   <%= image_tag @current_badge.img %>
-
   <h1><%= @current_badge.name.capitalize %></h1>
   <p><%= @current_badge.description %></p>
+  <% else %>
+    <h1>No Badge Yet</h1>
+      <p>Start getting shit done, you scruffy-looking nerf-herder.</p>
+  <% end %>
 
+  <% if @viewing_user.badges.count != 0 %>
   <div class="proglabel"><span class="l"><%= @current_badge.name.capitalize %></span><span class="r"><%= @next_badge[:badge][:name].capitalize %></span></div>
+  <% else %>
+  <div class="proglabel"><span class="l">No Badge</span><span class="r"><%= @next_badge[:badge][:name].capitalize %></span></div>
+  <% end %>
+
   <div class="progresswrap">
     <div class="progress" style="width: <%= @next_badge[:percentage] %>%">
     </div>

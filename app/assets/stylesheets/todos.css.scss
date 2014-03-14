@@ -590,26 +590,66 @@ i {
 
 // LEADERBOARD ___________________________________
 
+.userplace {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
 .leaderboard {
-  li {
-    list-style-type: none;
-    color: white;
-    ul {
-      li {
-        display: inline-block;
-        list-style-type: none;
-        line-height: 35px;
-        padding: 0px 30px;
-        img {
-          height: 30px;
-          border-radius: 15px;
-        }
-        span {
-          font-size: 24pt;
-          padding-bottom: 30px;
-        }
+  color: white;
+  border-collapse: collapse;
+  margin: 20px auto;
+
+  tr {
+    border-bottom: 1px solid white;
+    &.fill {
+      background: rgba(0,0,0,0.2);
+    }
+    &:first-of-type {
+      border-top: 1px solid white;
+    }
+    td {
+      width: 120px;
+      &:first-of-type {
+        padding-left: 20px;
+      }
+      &.ava {
+        width: 55px;
+      }
+      &.rank {
+        font-family: 'Lily Script One', cursive;
+      }
+      &.name {
+        text-transform: uppercase;
+      }
+      &.right {
+        text-align: right;
+      }
+      &.lp {
+        width: 275px;
+      }
+      img {
+        height: 40px;
+        border-radius: 20px;
+        margin-top: 4px;
+        border: 1px solid white;
       }
     }
   }
 }
 
+.leaderprogress {
+  margin: 0 auto;
+  width: 250px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  .prog {
+    background: $light-green;
+    height: 20px;
+    // border-radius: 15px 0px 0px 15px;
+  }
+}

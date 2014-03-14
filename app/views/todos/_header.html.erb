@@ -20,7 +20,7 @@
           <li class="un">
             <span><%= link_to @user.username, list_url %></span>
             <ul class="subnav">
-              <li>Leaderboard</li>
+              <li><%= link_to "Leaderboard", leaderboard_path %></li>
               <li><%= link_to "Profile", dashboard_url(user_id: @user.id) %></li>
               <li><%= link_to "Edit", edit_user_registration_path(@user) %></li>
             </ul>
