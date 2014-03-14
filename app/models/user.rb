@@ -4,7 +4,7 @@ has_many :levels
 
 
 def ranking
-  all = User.all.order(:points).reverse
+  all = User.all.order(:points)
   ids = all.map(&:id)
   return ids.index(self.id) + 1
 end
