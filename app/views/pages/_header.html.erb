@@ -26,10 +26,14 @@
             <% if @user.badges.count > 0 %>
               <%= @user.badges.last.name.capitalize %>
             <% else %>
-              No Level
+              No Badge
             <% end %>
           </li>
-          <li><%= @user.points %> Pts</li>
+          <% if @user.points != nil %>
+            <li><%= @user.points %> Pts</li>
+          <% else %>
+            <li>0 Pts</li>
+          <% end %>
           <li><i class="fa fa-star-o"></i><%= @user.ranking %></li>
         </ul>
         <%= image_tag @user.avatar.url, class: "navava", height: 50 %>
