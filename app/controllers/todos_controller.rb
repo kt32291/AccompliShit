@@ -86,7 +86,7 @@ class TodosController < ApplicationController
     @todo.destroy
     @user.change_points(6)
     respond_to do |format|
-      format.html { redirect_to '/test' }
+      format.html { redirect_to list_path }
       format.json { head :no_content }
     end
   end
