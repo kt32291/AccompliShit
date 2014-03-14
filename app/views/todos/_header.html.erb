@@ -6,9 +6,10 @@
     </div>
       </li>
       <li>
-    <ul class="linkz">
+   <ul class="linkz">
       <li>About</li>
       <% if user_signed_in? %>
+      <% @user = current_user %>
       <li><%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %></li>
       </ul>
     </li>
@@ -16,8 +17,15 @@
     <div class="current_user_stats">
 
         <ul>
-          <li class="un"><%= link_to @user.username, dashboard_url(user_id: @user.id) %></li>
-          <li><%= link_to "Edit", edit_user_registration_path(@user) %></li>
+          <li class="un">
+            <span><%= link_to @user.username, list_url %></span>
+            <ul class="subnav">
+              <li>Leaderboard</li>
+              <li><%= link_to "Profile", dashboard_url(user_id: @user.id) %></li>
+              <li><%= link_to "Edit", edit_user_registration_path(@user) %></li>
+            </ul>
+
+          </li>
           <li>
             <% if @user.badges.count > 0 %>
               <%= @user.badges.last.name.capitalize %>
@@ -26,7 +34,7 @@
             <% end %>
           </li>
           <li><%= @user.points %> Pts</li>
-          <li><i class="fa fa-star-o"></i> 16</li>
+          <li><i class="fa fa-star-o"></i><%= @user.ranking %></li>
         </ul>
         <%= image_tag @user.avatar.url, class: "navava", height: 50 %>
       </div>

@@ -3,6 +3,12 @@ has_many :badges , :through => :levels
 has_many :levels
 
 
+def ranking
+  all = User.all.order(:points).reverse
+  ids = all.map(&:id)
+  return ids.index(self.id) + 1
+end
+
 def change_points(options)
   if Gioco::Core::KINDS
     points = options[:points]

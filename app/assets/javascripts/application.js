@@ -50,7 +50,14 @@ $(function() {
     $('.slot li a').hover(function (){
       $('.doit').toggleClass('showit');
       $(this).toggleClass('bam');
-    })
+    });
+
+    $('.un').hover(function (){
+      $('.subnav').slideDown("slow");
+    }, function() {
+      $('.subnav').slideUp("slow");
+    }
+    );
 
     $('a.poop').click(function () {
       alert("Six for you Glen Coco! You go Glen Coco. Take 6 points for your hard work");

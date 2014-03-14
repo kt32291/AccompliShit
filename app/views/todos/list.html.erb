@@ -1,28 +1,22 @@
 <%= render 'header' %>
-
-<h2 class="add"><i class="fa fa-plus-square"></i> Add More Shit</h2>
+<div class="container">
+      <%= form_for(@todo, html: {class: "newtodo"}) do |t| %>
+        <%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %>
+        <%= t.hidden_field :user_id, :value => @user.id %>
+      <% end %>
 
 <% if @user.todos.count != 0 %>
 
 <ul class="listview">
   <% @todos.each do |todo| %>
-    <% if todo.content.length < 10 %>
-    <li class="biggest"><%= link_to todo.content, todo, method: :delete, :class => "poop" %></li>
-    <% elsif todo.content.length < 15 %>
-    <li class="bigger"><%= link_to todo.content, todo, method: :delete, :class => "poop" %></li>
-    <% elsif todo.content.length < 20 %>
-    <li class="big"><%= link_to todo.content, todo, method: :delete, :class => "poop" %></li>
-    <% elsif todo.content.length < 25 %>
-    <li class="medium"><%= link_to todo.content, todo, method: :delete, :class => "poop" %></li>
-    <% else %>
     <li class="small"><%= link_to todo.content, todo, method: :delete, :class => "poop" %></li>
-  <% end %>
   <% end %>
 
   <% else %>
 
-  <li class="medium"><%= link_to "Nothing to do? I don't believe you..." %></li>
+  <li><%= link_to "Nothing to do? I don't believe you..." %></li>
 
   <% end %>
 
 </ul>
+</div>
