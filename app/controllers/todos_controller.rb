@@ -56,7 +56,7 @@ class TodosController < ApplicationController
 
     respond_to do |format|
       if @todo.save
-        format.html { redirect_to @todo, notice: 'Todo was successfully created.' }
+        format.html { redirect_to list_path, notice: 'Todo was successfully created.' }
         format.json { render json: @todo, status: :created }
       else
         format.html { render action: 'new' }

@@ -2,7 +2,7 @@
     <ul>
       <li>
     <div class="title">
-      <h1><span class="meep">AccompliShit</span></h1>
+      <h1><span class="meep"><%= link_to "AccompliShit", root_url %></span></h1>
     </div>
       </li>
       <li>
@@ -20,6 +20,7 @@
           <li class="un">
             <span><%= link_to @user.username, list_url %></span>
             <ul class="subnav">
+              <li><%= link_to "My List", list_path %></li>
               <li><%= link_to "Leaderboard", leaderboard_path %></li>
               <li><%= link_to "Profile", dashboard_url(user_id: @user.id) %></li>
               <li><%= link_to "Edit", edit_user_registration_path(@user) %></li>
@@ -36,7 +37,7 @@
           <li><%= @user.points %> Pts</li>
           <li><i class="fa fa-star-o"></i><%= @user.ranking %></li>
         </ul>
-        <%= image_tag @user.avatar.url, class: "navava", height: 50 %>
+        <%= image_tag @user.avatar_url, class: "navava", height: 50 %>
       </div>
       <% else %>
       <li><%= link_to "Sign Up", new_user_registration_path %></li>

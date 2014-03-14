@@ -1,22 +1,24 @@
 <%= render 'header' %>
 <div class="container">
       <%= form_for(@todo, html: {class: "newtodo"}) do |t| %>
-        <%= t.text_field :content, :placeholder => 'New shit to do?'.html_safe %>
+        <%= t.text_field :content, :placeholder => '✍ New shit to do?'.html_safe %>
         <%= t.hidden_field :user_id, :value => @user.id %>
       <% end %>
 
 <% if @user.todos.count != 0 %>
 
-<ul class="listview">
+<table class="listview">
   <% @todos.each do |todo| %>
-    <li class="small"><%= link_to todo.content, todo, method: :delete, :class => "poop" %></li>
+  <tr>
+    <td><span><%= link_to todo.content, todo, method: :delete, :class => "poop" %></span></td>
+  </tr>
   <% end %>
 
   <% else %>
-
-  <li><%= link_to "Nothing to do? I don't believe you..." %></li>
-
+<tr>
+  <td><span> Nothing to do? I don't believe you... </span></td>
+</tr>
   <% end %>
 
-</ul>
+</table>
 </div>

@@ -33,6 +33,11 @@ $yellow: rgb(255, 255, 51);
       margin: 0px;
       text-transform: none;
       // text-decoration: underline;
+      .meep {
+        a {
+          color: $light-green;
+        }
+      }
     }
   }
   ul {
@@ -106,7 +111,7 @@ $yellow: rgb(255, 255, 51);
           display: block;
           border-bottom: 1px solid white;
           padding: 10px 15px;
-          &:nth-of-type(3n) {
+          &:nth-of-type(4n) {
             border: none;
           }
         }
@@ -160,7 +165,9 @@ $yellow: rgb(255, 255, 51);
       font-size: 11pt;
       text-transform: none;
       // color: $yellow;
+      a {
       color: $light-green;
+    }
       padding: 20px;
       padding-top: 8px;
       margin: 0px;
@@ -383,31 +390,50 @@ a {
 .newtodo {
   text-align: center;
   margin: 0px auto;
+  margin-top: 40px;
   input {
-    text-align: center;
+    text-align: left;
+    line-height: 50px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid white;
-    font-size: 24pt;
+    font-size: 20pt;
     color: white;
     list-style-type: none;
-    width: 50%;
+    width: 500px;
     outline-width: 0;
   }
 }
 
 .listview {
-  text-align: left;
+  text-align: center;
   padding-left: 0px;
-  li {
-    @include fontsizefix;
-    list-style-type: none;
-    a {
+  width: 500px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  position: relative;
+  tr {
+    border-bottom: 1px solid white;
+    font-size: 20pt;
+    line-height: 50px;
+  td {
+    text-align: left;
+    // position: relative;
+
+    span {
+      padding-left: 40px;
     &:hover {
       text-decoration: line-through;
+      &:before {
+        content: "✓";
+        position: absolute;
+        left: 3px;
+        color: $light-green;
+      }
     }
   }
   }
+}
 }
 
 // PROFILE
@@ -491,6 +517,20 @@ a {
     padding-left: 0px;
     li {
       list-style-type: none;
+    }
+  }
+  .listlink {
+    background: black;
+    padding: 3px 15px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid white;
+    &:hover {
+      background: $light-green;
+      color: black;
+      border: 1px solid black;
     }
   }
 }
