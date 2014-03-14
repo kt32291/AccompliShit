@@ -519,20 +519,28 @@ a {
       list-style-type: none;
     }
   }
+  .usrlinks {
+    margin-bottom: 25px;
   .listlink {
     background: black;
     padding: 3px 15px;
     margin: 0px auto;
-    margin-bottom: 30px;
     width: 80px;
     border-radius: 5px;
+    margin-bottom: 5px;
     border: 1px solid white;
     &:hover {
       background: $light-green;
       color: black;
       border: 1px solid black;
     }
+    a {
+      &:hover {
+        color: black;
+      }
+    }
   }
+}
 }
 
 .clear {
