@@ -26,7 +26,9 @@
   </div>
   <% if @viewing_user.id == current_user.id %>
   <div class="usrlinks">
-  <div class="listlink"><%= link_to "My List", list_url %></div> <div class="listlink"><%= link_to "Roulette", roulette_url %></div>
+  <div class="listlink"><%= link_to "My List", list_url %></div> <div class="listlink"><%= link_to "Roulette", roulette_url %></div><div class="listlink">
+  <%= link_to "Delete Account", cancel_user_registration_path %>
+</div>
 </div>
   <% end %>
 </div>
