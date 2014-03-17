@@ -7,7 +7,7 @@
   <% @all_users.each do |user| %>
     <tr <% if user.id == current_user.id %> style="background: rgba(0,0,0,0.3)" <% end %>>
       <td class="ava rank"><span><%= user.ranking %></span></td>
-      <td class="ava"><%= link_to image_tag(user.avatar.url), dashboard_path(user_id: user.id) %></td>
+      <td class="ava"><%= link_to image_tag(user.avatar.thumb.url), dashboard_path(user_id: user.id) %></td>
       <td class="name"><span><%= link_to user.username, dashboard_path(user_id: user.id) %></span></td>
       <% if user.points != nil %>
       <td><span><%= user.points %> Pts.</span></td>
