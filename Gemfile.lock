@@ -49,6 +49,9 @@ GEM
     erubis (2.7.0)
     excon (0.13.4)
     execjs (2.0.2)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     fog (1.3.1)
       builder
       excon (~> 0.13.0)
@@ -154,6 +157,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
+  figaro
   fog (~> 1.3.1)
   gioco
   jbuilder (~> 1.2)
