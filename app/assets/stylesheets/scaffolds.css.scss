@@ -1,6 +1,6 @@
 body {
   background-color: #fff;
-  color: #333;
+  // color: #333;
 }
 
 p, ol, ul, td {
@@ -12,13 +12,13 @@ pre {
 }
 
 a {
-  color: white;
+  // color: white;
   text-decoration: none;
   &:visited {
-    color: #666;
+    // color: #666;
   }
   &:hover {
-    color: #fff;
+    // color: #fff;
   }
 }
 

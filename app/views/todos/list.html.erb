@@ -1,4 +1,6 @@
 <%= render 'header' %>
+<div class="miniback"></div>
+
 <div class="container">
       <%= form_for(@todo, html: {class: "newtodo"}) do |t| %>
         <%= t.text_field :content, :placeholder => '✍ New shit to do?'.html_safe %>

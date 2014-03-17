@@ -20,8 +20,12 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
 
 .billboard {
   margin: 0px auto;
-  background: rgba(0,0,0,0.1);
-  border-radius: 0 0 10px 10px;
+  background: url('background.jpg');
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-bottom: 2px solid $purple;
   img {
     float: left;
     margin: 20px 40px;
@@ -32,15 +36,20 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
     font-family: 'Lily Script One', cursive;
     font-size: 45pt;
     padding-top: 50px;
+    background: rgba(0,0,0,0.6);
   }
   p {
-    color: white;
+    color: black;
+    font-weight: bolder;
     font-size: 18pt;
   }
   a {
     float: right;
-    padding: 30px 50px;
+    margin: 30px 50px;
+    padding: 5px 15px;
     font-size: 24pt;
+    background: black;
+    border-radius: 10px;
   }
   .clear {
     content: "";

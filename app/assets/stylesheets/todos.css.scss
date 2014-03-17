@@ -124,13 +124,22 @@ $yellow: rgb(255, 255, 51);
   float: right;
 }
 
+.miniback {
+  background: url('background.jpg');
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  // border-bottom: 2px solid $light-green;
+}
+
 
 
 // SIGN IN ____________________________________________________
 
 .sign {
   // background: rgba(0,0,0,0.5);
-  width: 500px;
+  // width: 500px;
   margin: 0px auto;
   margin-top: 0px;
   // border-radius: 0px 0px 10px 10px;
@@ -140,9 +149,18 @@ $yellow: rgb(255, 255, 51);
   .signlogo {
     margin-top: 0px;
     // background: rgba(0,0,0,0.4);
+    background: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     font-size: 24pt;
     text-align: center;
     text-transform: uppercase;
+    border-bottom: 2px solid $purple;
+    .info {
+      background: rgba(0,0,0,0.6);
+      width: 400px;
+      margin: 0 auto;
     img {
       width: 150px;
       padding-top: 10px;
@@ -156,6 +174,9 @@ $yellow: rgb(255, 255, 51);
       font-size: 32pt;
       line-height: 18px;
       padding-bottom: 30px;
+      a {
+        color: $light-green;
+      }
     }
     h2 {
       font-size: 12pt;
@@ -164,6 +185,7 @@ $yellow: rgb(255, 255, 51);
     h3 {
       font-size: 11pt;
       text-transform: none;
+      color: $light-green;
       // color: $yellow;
       a {
       color: $light-green;
@@ -172,6 +194,7 @@ $yellow: rgb(255, 255, 51);
       padding-top: 8px;
       margin: 0px;
     }
+  }
   }
   h2 {
     // color: $purple;
@@ -641,7 +664,7 @@ i {
 .userplace {
   color: white;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .leaderboard {
