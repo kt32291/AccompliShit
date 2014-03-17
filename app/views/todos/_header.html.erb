@@ -7,7 +7,13 @@
       </li>
       <li>
    <ul class="linkz">
-      <li>About</li>
+      <li class="bout"><span><i class="fa fa-chevron-down"></i> About</span>
+        <ul class="sbnav">
+          <li>How it Works</li>
+          <li>FAQ</li>
+          <li>The Team</li>
+        </ul>
+      </li>
       <% if user_signed_in? %>
       <% @user = current_user %>
       <li><%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %></li>
@@ -18,7 +24,7 @@
 
         <ul>
           <li class="un">
-            <span><%= link_to @user.username, list_url %></span>
+            <span><i class="fa fa-chevron-down"></i> <%= link_to @user.username, list_url %></span>
             <ul class="subnav">
               <li><%= link_to "My List", list_path %></li>
               <li><%= link_to "Leaderboard", leaderboard_path %></li>

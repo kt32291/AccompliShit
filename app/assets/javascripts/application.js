@@ -53,9 +53,16 @@ $(function() {
     });
 
     $('.un').hover(function (){
-      $('.subnav').stop(true, true).slideDown("slow");
+      $('.subnav').stop(true, true).slideDown("fast");
     }, function() {
-      $('.subnav').slideUp("slow");
+      $('.subnav').slideUp("fast");
+    }
+    );
+
+    $('.bout').hover(function (){
+      $('.sbnav').stop(true, true).slideDown("fast");
+    }, function() {
+      $('.sbnav').slideUp("fast");
     }
     );
 

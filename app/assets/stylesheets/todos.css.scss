@@ -93,6 +93,9 @@ $yellow: rgb(255, 255, 51);
       }
       &.un {
         color: $light-green;
+        i {
+          color: $light-green;
+        }
       }
       i {
         color: $purple;
@@ -119,6 +122,32 @@ $yellow: rgb(255, 255, 51);
     }
   }
 }
+    .bout {
+      position: relative;
+      .sbnav {
+        width: 175px;
+        text-transform: none;
+        display: none;
+        padding-top: 0px;
+        position: absolute;
+        top: 46px;
+        // z-index: -5;
+        // padding-top: 40px;
+        padding-left: 0px;
+        background: black;
+        border-radius: 0 0 5px 5px;
+        li {
+          text-transform: none;
+          display: block;
+          font-size: 14pt;
+          border-bottom: 1px solid white;
+          padding: 10px 15px;
+          &:nth-of-type(3n) {
+            border: none;
+          }
+        }
+      }
+    }
 
 .current_user_stats ul, .navava {
   float: right;
@@ -173,6 +202,7 @@ $yellow: rgb(255, 255, 51);
       margin: 0px;
       font-size: 32pt;
       line-height: 18px;
+      padding-top: 50px;
       padding-bottom: 30px;
       a {
         color: $light-green;
@@ -416,11 +446,11 @@ a {
   margin-top: 40px;
   input {
     text-align: left;
-    line-height: 50px;
+    line-height: 40px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid white;
-    font-size: 20pt;
+    font-size: 18pt;
     color: white;
     list-style-type: none;
     width: 500px;
@@ -437,8 +467,8 @@ a {
   position: relative;
   tr {
     border-bottom: 1px solid white;
-    font-size: 20pt;
-    line-height: 50px;
+    font-size: 18pt;
+    line-height: 40px;
   td {
     text-align: left;
     // position: relative;
@@ -457,6 +487,11 @@ a {
   }
   }
 }
+}
+
+.nothing {
+  color: $light-green;
+  text-align: center;
 }
 
 // PROFILE
@@ -478,6 +513,9 @@ a {
   }
   p {
     color: white;
+    span {
+      color: $light-green;
+    }
   }
 .proglabel {
   width: 470px;
