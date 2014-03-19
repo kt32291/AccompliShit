@@ -1,0 +1,7 @@
+<% todos.each do |todo| %>
+  <tr>
+    <td><span><%= link_to todo.content, todo, method: :delete, :class => "poop" %></span></td>
+  </tr>
+  <% end %>
+
+

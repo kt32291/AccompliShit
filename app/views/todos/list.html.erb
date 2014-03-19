@@ -2,23 +2,20 @@
 <div class="miniback"></div>
 
 <div class="container">
-      <%= form_for(@todo, html: {class: "newtodo"}) do |t| %>
+      <%= form_for(@todo, remote: true, html: {class: "newtodo"}) do |t| %>
         <%= t.text_field :content, :placeholder => '✍ New shit to do?'.html_safe %>
         <%= t.hidden_field :user_id, :value => @user.id %>
       <% end %>
 
 <% if @user.todos.count != 0 %>
 
-<table class="listview">
-  <% @todos.each do |todo| %>
-  <tr>
-    <td><span><%= link_to todo.content, todo, method: :delete, :class => "poop" %></span></td>
-  </tr>
-  <% end %>
+<table class="listview" id="listview">
 
-  <% else %>
-<h1 class="nothing">Nothing to do? I don't believe you... </h1>
-  <% end %>
+<%= render partial: 'list', locals: { todos: @todos } %>
+
+<% else %>
+  <h1 class="nothing">Nothing to do? I don't believe you... </h1>
+<% end %>
 
 </table>
 </div>

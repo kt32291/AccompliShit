@@ -51,16 +51,20 @@ class TodosController < ApplicationController
   # POST /todos
   # POST /todos.json
   def create
+    @user = current_user
     @todo = Todo.new(todo_params)
     @todo.user_id = current_user.id
+    @todos = @user.todos.order(:content)
 
     respond_to do |format|
       if @todo.save
         format.html { redirect_to list_path, notice: 'Todo was successfully created.' }
         format.json { render json: @todo, status: :created }
+        format.js {}
       else
         format.html { render action: 'new' }
         format.json { render json: @todo.errors, status: :unprocessable_entity }
+        format.js {}
       end
     end
   end
